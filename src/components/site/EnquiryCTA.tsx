@@ -1,5 +1,10 @@
 import { MessageCircle, ArrowRight } from "lucide-react";
 
+function scrollToEnquiry() {
+  const el = document.getElementById("enquiry-form");
+  if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
 export function EnquiryCTA() {
   return (
     <section className="py-16 md:py-20">
@@ -21,11 +26,16 @@ export function EnquiryCTA() {
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-3">
-              <a href="#contact" className="btn-primary">
+              <button
+                type="button"
+                onClick={scrollToEnquiry}
+                className="btn-primary"
+                aria-label="Scroll to enquiry form"
+              >
                 Enquire Now <ArrowRight className="h-4 w-4" />
-              </a>
+              </button>
               <a
-                href="https://wa.me/919999999999"
+                href="https://wa.me/917010850923"
                 target="_blank"
                 rel="noreferrer"
                 className="btn-whatsapp !px-5 !py-3 !text-base"

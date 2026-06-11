@@ -46,7 +46,7 @@ function Index() {
         <Testimonials limit={3} />
         <Gallery limit={4} />
         <EnquiryCTA />
-        <div className="py-20 md:py-28">
+        <div id="enquiry-form" className="py-20 md:py-28">
           <div className="container-x max-w-3xl">
             <div className="text-center mb-10" data-aos="fade-up">
               <h2 className="text-3xl md:text-4xl font-extrabold text-navy">
