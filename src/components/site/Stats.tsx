@@ -54,28 +54,31 @@ export function StatsDark() {
         </div>
 
         <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6">
-          {items.map((it, i) => {
-            const v = useCountUp(it.value, inView);
-            return (
-              <div
-                key={it.label}
-                data-aos="zoom-in"
-                data-aos-delay={i * 80}
-                className="rounded-2xl border border-white/10 bg-white/[0.04] backdrop-blur p-6 text-center"
-              >
-                <div className="text-4xl md:text-5xl font-extrabold tracking-tight">
-                  {v.toLocaleString()}
-                  {it.suffix}
-                </div>
-                <div className="mt-2 text-sm text-white/70">{it.label}</div>
-              </div>
-            );
-          })}
+          {items.map((it, i) => (
+            <StatCard key={it.label} item={it} index={i} inView={inView} />
+          ))}
         </div>
       </div>
     </section>
   );
 }
+
+function StatCard({ item, index, inView }: { item: typeof items[number]; index: number; inView: boolean }) {
+  const v = useCountUp(item.value, inView);
+  return (
+    <div
+      data-aos="zoom-in"
+      data-aos-delay={index * 80}
+      className="rounded-2xl border border-white/10 bg-white/[0.04] backdrop-blur p-6 text-center"
+    >
+      <div className="text-4xl md:text-5xl font-extrabold tracking-tight">
+        {v.toLocaleString()}{item.suffix}
+      </div>
+      <div className="mt-2 text-sm text-white/70">{item.label}</div>
+    </div>
+  );
+}
+
 
 export function TrustStrip() {
   const t = [
