@@ -1,4 +1,5 @@
 import { Compass, Facebook, Instagram, Youtube, Linkedin, MapPin, Phone, Mail } from "lucide-react";
+import { Link } from "@tanstack/react-router";
 
 export function Footer() {
   return (
@@ -29,18 +30,29 @@ export function Footer() {
         <div>
           <h4 className="font-bold text-base">Quick Links</h4>
           <ul className="mt-4 space-y-2 text-sm text-white/70">
-            {["Home", "Courses", "Placements", "Gallery", "Testimonials", "Contact"].map((l) => (
-              <li key={l}><a href={`#${l.toLowerCase()}`} className="hover:text-electric transition-colors">{l}</a></li>
-            ))}
+            <li><Link to="/" className="hover:text-electric transition-colors">Home</Link></li>
+            <li><Link to="/about" className="hover:text-electric transition-colors">About Us</Link></li>
+            <li><Link to="/courses" className="hover:text-electric transition-colors">Courses</Link></li>
+            <li><Link to="/placements" className="hover:text-electric transition-colors">Placements</Link></li>
+            <li><Link to="/gallery" className="hover:text-electric transition-colors">Gallery</Link></li>
+            <li><Link to="/testimonials" className="hover:text-electric transition-colors">Testimonials</Link></li>
+            <li><Link to="/contact" className="hover:text-electric transition-colors">Contact</Link></li>
           </ul>
         </div>
 
         <div>
           <h4 className="font-bold text-base">Popular Courses</h4>
           <ul className="mt-4 space-y-2 text-sm text-white/70">
-            {["AutoCAD", "Revit", "STAAD Pro", "CATIA", "SolidWorks", "Full Stack Development", "Python", "Data Science"].map((c) => (
-              <li key={c}><a href="#courses" className="hover:text-electric transition-colors">{c}</a></li>
-            ))}
+            {["autocad", "revit-architecture", "staad-pro", "catia", "solidworks", "full-stack-development", "python-programming", "data-science"].map((slug) => {
+              const names: Record<string, string> = {
+                "autocad": "AutoCAD", "revit-architecture": "Revit", "staad-pro": "STAAD Pro", 
+                "catia": "CATIA", "solidworks": "SolidWorks", "full-stack-development": "Full Stack", 
+                "python-programming": "Python", "data-science": "Data Science"
+              };
+              return (
+                <li key={slug}><Link to={`/courses/${slug}`} className="hover:text-electric transition-colors">{names[slug]}</Link></li>
+              );
+            })}
           </ul>
         </div>
 

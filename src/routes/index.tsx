@@ -1,7 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useEffect } from "react";
-import AOS from "aos";
-
 import { Navbar } from "@/components/site/Navbar";
 import { Hero } from "@/components/site/Hero";
 import { TrustStrip, StatsDark } from "@/components/site/Stats";
@@ -15,6 +12,7 @@ import { EnquiryForm } from "@/components/site/EnquiryForm";
 import { Newsletter } from "@/components/site/Newsletter";
 import { Footer } from "@/components/site/Footer";
 import { WhatsAppFloat } from "@/components/site/WhatsAppFloat";
+import { PageWrapper } from "@/components/site/PageWrapper";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -34,26 +32,34 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
-  useEffect(() => {
-    AOS.init({ duration: 700, easing: "ease-out-cubic", once: true, offset: 60 });
-  }, []);
-
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
-      <main>
+      <PageWrapper className="!pt-0">
         <Hero />
         <TrustStrip />
         <WhyChoose />
-        <Courses />
+        {/* Pass limits for the previews on the Home page */}
+        <Courses limit={4} />
         <StatsDark />
-        <Placements />
-        <Testimonials />
-        <Gallery />
+        <Placements limit={3} />
+        <Testimonials limit={3} />
+        <Gallery limit={4} />
         <EnquiryCTA />
-        <EnquiryForm />
+        <div className="py-20 md:py-28">
+          <div className="container-x max-w-3xl">
+            <div className="text-center mb-10" data-aos="fade-up">
+              <h2 className="text-3xl md:text-4xl font-extrabold text-navy">
+                Have <span className="text-electric">Questions?</span>
+              </h2>
+            </div>
+            <div className="card-soft p-8" data-aos="zoom-in">
+              <EnquiryForm hideHeading />
+            </div>
+          </div>
+        </div>
         <Newsletter />
-      </main>
+      </PageWrapper>
       <Footer />
       <WhatsAppFloat />
     </div>

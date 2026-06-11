@@ -1,22 +1,10 @@
 import { ArrowRight, Clock } from "lucide-react";
+import { Link } from "@tanstack/react-router";
+import { courses } from "@/lib/data";
 
-const courses = [
-  { name: "AutoCAD", desc: "2D & 3D drafting for design professionals.", duration: "2 Months", cat: "CAD", grad: "from-blue-500 to-indigo-600" },
-  { name: "Civil CAD", desc: "Site plans, layouts & structural drawings.", duration: "3 Months", cat: "Civil", grad: "from-amber-500 to-orange-600" },
-  { name: "Mechanical CAD", desc: "Part modeling, assembly & drafting.", duration: "3 Months", cat: "Mech", grad: "from-rose-500 to-red-600" },
-  { name: "Electrical CAD", desc: "Schematic, panel & wiring design.", duration: "2 Months", cat: "Elec", grad: "from-yellow-500 to-amber-600" },
-  { name: "Revit Architecture", desc: "BIM modeling for architects.", duration: "3 Months", cat: "BIM", grad: "from-cyan-500 to-blue-600" },
-  { name: "STAAD Pro", desc: "Structural analysis & design.", duration: "2 Months", cat: "Civil", grad: "from-emerald-500 to-teal-600" },
-  { name: "CATIA", desc: "Advanced surface & product design.", duration: "3 Months", cat: "Mech", grad: "from-violet-500 to-purple-600" },
-  { name: "SolidWorks", desc: "Parametric 3D modeling.", duration: "3 Months", cat: "Mech", grad: "from-sky-500 to-indigo-600" },
-  { name: "Python Programming", desc: "From basics to automation & APIs.", duration: "3 Months", cat: "IT", grad: "from-green-500 to-emerald-600" },
-  { name: "Java Full Stack", desc: "Core Java, Spring Boot & databases.", duration: "4 Months", cat: "IT", grad: "from-red-500 to-rose-600" },
-  { name: "Full Stack Development", desc: "MERN stack with live projects.", duration: "5 Months", cat: "IT", grad: "from-indigo-500 to-purple-600" },
-  { name: "Data Science", desc: "Python, ML, Pandas & visualization.", duration: "5 Months", cat: "IT", grad: "from-fuchsia-500 to-pink-600" },
-  { name: "Tally Prime", desc: "Accounting, GST & business analytics.", duration: "2 Months", cat: "Biz", grad: "from-lime-500 to-green-600" },
-];
+export function Courses({ limit }: { limit?: number }) {
+  const displayCourses = limit ? courses.slice(0, limit) : courses;
 
-export function Courses() {
   return (
     <section id="courses" className="py-20 md:py-28 bg-surface">
       <div className="container-x">
@@ -30,13 +18,13 @@ export function Courses() {
               Choose from CAD, civil, mechanical, electrical and IT courses — all with certificates and placement support.
             </p>
           </div>
-          <a href="#contact" className="btn-outline self-start md:self-end" data-aos="fade-left">
+          <Link to="/courses" className="btn-outline self-start md:self-end" data-aos="fade-left">
             View All Courses <ArrowRight className="h-4 w-4" />
-          </a>
+          </Link>
         </div>
 
         <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {courses.map((c, i) => (
+          {displayCourses.map((c, i) => (
             <div
               key={c.name}
               data-aos="fade-up"
@@ -59,17 +47,25 @@ export function Courses() {
                   <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-muted-foreground">
                     <Clock className="h-3.5 w-3.5" /> {c.duration}
                   </span>
-                  <a
-                    href="#contact"
+                  <Link
+                    to={`/courses/${c.slug}`}
                     className="inline-flex items-center gap-1 text-sm font-bold text-electric hover:gap-2 transition-all"
                   >
-                    Enquire <ArrowRight className="h-3.5 w-3.5" />
-                  </a>
+                    Details <ArrowRight className="h-3.5 w-3.5" />
+                  </Link>
                 </div>
               </div>
             </div>
           ))}
         </div>
+        
+        {limit && (
+          <div className="mt-12 flex justify-center">
+            <Link to="/courses" className="btn-primary">
+              View All Courses <ArrowRight className="h-4 w-4 ml-2" />
+            </Link>
+          </div>
+        )}
       </div>
     </section>
   );

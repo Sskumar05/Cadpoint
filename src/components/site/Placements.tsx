@@ -1,15 +1,10 @@
-import { Building2, IndianRupee, TrendingUp } from "lucide-react";
+import { Building2, IndianRupee, TrendingUp, ArrowRight } from "lucide-react";
+import { Link } from "@tanstack/react-router";
+import { placementCompanies, placementStories } from "@/lib/data";
 
-const companies = ["Larsen & Toubro", "TCS", "Infosys", "Wipro", "Cognizant", "L&T Construction", "Godrej", "Ashok Leyland", "HCL", "Accenture", "Mahindra", "Capgemini"];
+export function Placements({ limit }: { limit?: number }) {
+  const displayStories = limit ? placementStories.slice(0, limit) : placementStories;
 
-const stories = [
-  { name: "Karthik R.", role: "AutoCAD Designer", company: "L&T Construction", pkg: "₹4.8 LPA", course: "Civil CAD" },
-  { name: "Priya M.", role: "Mechanical Engineer", company: "Ashok Leyland", pkg: "₹5.2 LPA", course: "CATIA + SolidWorks" },
-  { name: "Suresh K.", role: "Full Stack Developer", company: "TCS", pkg: "₹6.5 LPA", course: "Full Stack Development" },
-  { name: "Divya S.", role: "BIM Engineer", company: "AECOM India", pkg: "₹5.8 LPA", course: "Revit Architecture" },
-];
-
-export function Placements() {
   return (
     <section id="placements" className="py-20 md:py-28">
       <div className="container-x">
@@ -24,7 +19,7 @@ export function Placements() {
         </div>
 
         <div className="mt-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3" data-aos="fade-up">
-          {companies.map((c) => (
+          {placementCompanies.map((c) => (
             <div
               key={c}
               className="h-16 rounded-xl border bg-card flex items-center justify-center px-3 text-center text-sm font-bold text-navy/80 hover:border-electric hover:text-electric transition-colors"
@@ -34,12 +29,12 @@ export function Placements() {
           ))}
         </div>
 
-        <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {stories.map((s, i) => (
+        <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {displayStories.map((s, i) => (
             <div
               key={s.name}
               data-aos="zoom-in"
-              data-aos-delay={i * 100}
+              data-aos-delay={(i % 3) * 100}
               className="card-soft p-6"
             >
               <div className="flex items-center gap-3">
@@ -65,6 +60,14 @@ export function Placements() {
             </div>
           ))}
         </div>
+
+        {limit && (
+          <div className="mt-12 flex justify-center">
+            <Link to="/placements" className="btn-primary">
+              View All Placements <ArrowRight className="h-4 w-4 ml-2" />
+            </Link>
+          </div>
+        )}
       </div>
     </section>
   );

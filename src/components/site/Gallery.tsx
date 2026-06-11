@@ -1,17 +1,10 @@
 import { ArrowRight } from "lucide-react";
-import g1 from "@/assets/gallery-1.jpg";
-import g2 from "@/assets/gallery-2.jpg";
-import g3 from "@/assets/gallery-3.jpg";
-import g4 from "@/assets/gallery-4.jpg";
+import { Link } from "@tanstack/react-router";
+import { galleryImages } from "@/lib/data";
 
-const images = [
-  { src: g1, alt: "CAD training lab", span: "md:col-span-2 md:row-span-2" },
-  { src: g2, alt: "Graduation ceremony", span: "" },
-  { src: g3, alt: "Classroom session", span: "" },
-  { src: g4, alt: "Placement interview", span: "md:col-span-2" },
-];
+export function Gallery({ limit }: { limit?: number }) {
+  const displayImages = limit ? galleryImages.slice(0, limit) : galleryImages;
 
-export function Gallery() {
   return (
     <section id="gallery" className="py-20 md:py-28">
       <div className="container-x">
@@ -22,18 +15,18 @@ export function Gallery() {
               Inside the CADPOINT experience
             </h2>
           </div>
-          <a href="#" className="btn-outline self-start md:self-end" data-aos="fade-left">
+          <Link to="/gallery" className="btn-outline self-start md:self-end" data-aos="fade-left">
             View All Gallery <ArrowRight className="h-4 w-4" />
-          </a>
+          </Link>
         </div>
 
-        <div className="mt-12 grid grid-cols-2 md:grid-cols-4 auto-rows-[180px] md:auto-rows-[220px] gap-4">
-          {images.map((img, i) => (
+        <div className="mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 auto-rows-[180px] md:auto-rows-[220px] gap-4">
+          {displayImages.map((img, i) => (
             <div
               key={i}
               data-aos="zoom-in"
-              data-aos-delay={i * 80}
-              className={`relative overflow-hidden rounded-2xl group ${img.span}`}
+              data-aos-delay={(i % 4) * 80}
+              className={`relative overflow-hidden rounded-2xl group ${img.span || ''}`}
             >
               <img
                 src={img.src}
@@ -47,6 +40,14 @@ export function Gallery() {
             </div>
           ))}
         </div>
+        
+        {limit && (
+          <div className="mt-12 flex justify-center">
+            <Link to="/gallery" className="btn-primary">
+              View Full Gallery <ArrowRight className="h-4 w-4 ml-2" />
+            </Link>
+          </div>
+        )}
       </div>
     </section>
   );
