@@ -43,10 +43,10 @@ function CourseDetailsPage() {
           <div className="grid lg:grid-cols-3 gap-10">
             <div className="lg:col-span-2 space-y-8">
               <div data-aos="fade-up">
-                <span className="inline-block px-3 py-1 mb-4 text-xs font-bold tracking-wider text-white bg-electric rounded-full">
+                <span className="inline-block px-3 py-1 mb-4 text-xs font-bold tracking-wider text-white bg-brand-red rounded-full">
                   {course.cat}
                 </span>
-                <h1 className="text-4xl md:text-5xl font-extrabold text-navy leading-tight">
+                <h1 className="text-4xl md:text-5xl font-extrabold text-charcoal leading-tight">
                   {course.name}
                 </h1>
                 <p className="mt-4 text-xl text-muted-foreground">
@@ -55,10 +55,10 @@ function CourseDetailsPage() {
               </div>
 
               <div data-aos="fade-up" data-aos-delay="100" className="prose prose-lg max-w-none text-foreground/80">
-                <h3 className="text-2xl font-bold text-navy">Course Overview</h3>
+                <h3 className="text-2xl font-bold text-charcoal">Course Overview</h3>
                 <p>{course.details}</p>
                 
-                <h3 className="text-2xl font-bold text-navy mt-8">What You Will Learn</h3>
+                <h3 className="text-2xl font-bold text-charcoal mt-8">What You Will Learn</h3>
                 <ul className="space-y-3 mt-4">
                   {[
                     "Industry-standard tools and techniques",
@@ -67,7 +67,7 @@ function CourseDetailsPage() {
                     "Preparation for certification and employment"
                   ].map((item, i) => (
                     <li key={i} className="flex items-start gap-3">
-                      <CheckCircle2 className="h-6 w-6 text-electric flex-shrink-0" />
+                      <CheckCircle2 className="h-6 w-6 text-brand-red flex-shrink-0" />
                       <span>{item}</span>
                     </li>
                   ))}
@@ -76,28 +76,33 @@ function CourseDetailsPage() {
             </div>
 
             <div className="lg:col-span-1" data-aos="fade-left">
-              <div className="card-soft p-6 sticky top-28">
-                <div className={`h-32 rounded-xl mb-6 bg-gradient-to-br ${course.grad} flex items-center justify-center relative overflow-hidden`}>
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.25),transparent_60%)]" />
-                  <span className="font-display text-4xl font-extrabold text-white drop-shadow">
-                    {course.name.split(" ")[0]}
+              <div className="card-soft p-6 sticky top-28 group">
+                <div className="h-40 rounded-xl mb-6 flex items-center justify-center relative overflow-hidden">
+                  <img
+                    src={course.image}
+                    alt={course.name}
+                    className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-charcoal/60 transition-opacity duration-500 group-hover:bg-charcoal/40" />
+                  <span className="relative font-display text-2xl md:text-3xl font-extrabold text-white drop-shadow-md text-center px-4 z-10">
+                    {course.name}
                   </span>
                 </div>
                 
                 <div className="space-y-4 mb-8">
                   <div className="flex items-center justify-between pb-4 border-b">
                     <span className="text-muted-foreground font-medium">Duration</span>
-                    <span className="flex items-center gap-1.5 font-bold text-navy">
-                      <Clock className="h-4 w-4 text-electric" /> {course.duration}
+                    <span className="flex items-center gap-1.5 font-bold text-charcoal">
+                      <Clock className="h-4 w-4 text-brand-red" /> {course.duration}
                     </span>
                   </div>
                   <div className="flex items-center justify-between pb-4 border-b">
                     <span className="text-muted-foreground font-medium">Mode</span>
-                    <span className="font-bold text-navy">Offline / Online</span>
+                    <span className="font-bold text-charcoal">Offline / Online</span>
                   </div>
                   <div className="flex items-center justify-between pb-4 border-b">
                     <span className="text-muted-foreground font-medium">Placement</span>
-                    <span className="font-bold text-navy">100% Assistance</span>
+                    <span className="font-bold text-charcoal">100% Assistance</span>
                   </div>
                 </div>
 

@@ -24,7 +24,7 @@ function ThankYouPage() {
           <div className="inline-flex h-24 w-24 rounded-full bg-green-100 items-center justify-center mb-8">
             <CheckCircle2 className="h-12 w-12 text-green-600" />
           </div>
-          <h1 className="text-4xl md:text-5xl font-extrabold text-navy">
+          <h1 className="text-4xl md:text-5xl font-extrabold text-charcoal">
             Thank You!
           </h1>
           <p className="mt-6 text-xl text-muted-foreground">

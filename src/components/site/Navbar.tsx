@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Menu, X, MessageCircle, Compass } from "lucide-react";
 import { Link, useLocation } from "@tanstack/react-router";
+import logoImg from "@/assets/courses/Logo_img.png";
 
 const links = [
   { href: "/", label: "Home" },
@@ -32,12 +33,12 @@ export function Navbar() {
     >
       <div className="container-x flex h-16 md:h-20 items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
-          <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-navy text-navy-foreground">
-            <Compass className="h-5 w-5" />
+          <span>
+            <img src={logoImg} alt="Logo" className="h-20 w-20 sm:h-25 sm:w-25 mb-[-8] sm:mb-[-8]" />
           </span>
           <div className="leading-tight">
-            <div className="font-display text-lg font-extrabold text-navy">CADPOINT</div>
-            <div className="text-[10px] tracking-widest text-muted-foreground -mt-0.5">TIRUVARUR</div>
+            <div className="font-display text-md font-extrabold text-charcoal sm:text-lg ">CADPOINT</div>
+            <div className="text-[10px] tracking-widest text-muted-foreground sm:-mt-0.5">TIRUVARUR</div>
           </div>
         </Link>
 
@@ -46,9 +47,9 @@ export function Navbar() {
             <Link
               key={l.href}
               to={l.href}
-              className={`text-sm font-medium transition-colors hover:text-electric ${
+              className={`text-sm font-medium transition-colors hover:text-brand-red ${
                 (l.href === "/" && location.pathname === "/") || (l.href !== "/" && location.pathname.startsWith(l.href))
-                  ? "text-electric"
+                  ? "text-brand-red"
                   : "text-foreground/80"
               }`}
             >
@@ -86,7 +87,7 @@ export function Navbar() {
                 onClick={() => setOpen(false)}
                 className={`rounded-md px-3 py-2.5 text-sm font-medium hover:bg-muted ${
                   (l.href === "/" && location.pathname === "/") || (l.href !== "/" && location.pathname.startsWith(l.href))
-                    ? "text-electric bg-muted"
+                    ? "text-brand-red bg-muted"
                     : "text-foreground/80"
                 }`}
               >

@@ -27,8 +27,8 @@ function EnquiryPage() {
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-10" data-aos="fade-up">
               <span className="eyebrow">Admissions Open</span>
-              <h1 className="mt-4 text-3xl md:text-4xl font-extrabold text-navy leading-tight">
-                Get a Free <span className="text-electric">Career Counseling</span> Session
+              <h1 className="mt-4 text-3xl md:text-4xl font-extrabold text-charcoal leading-tight">
+                Get a Free <span className="text-brand-red">Career Counseling</span> Session
               </h1>
               <p className="mt-4 text-lg text-muted-foreground">
                 Fill out the form below and our career experts will call you to guide you toward the right course.

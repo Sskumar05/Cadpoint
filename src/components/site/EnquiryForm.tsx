@@ -43,10 +43,10 @@ export function EnquiryForm({ hideHeading }: { hideHeading?: boolean }) {
       className={`space-y-4 ${!hideHeading ? "card-soft p-6 md:p-8" : ""}`}
     >
       <div>
-        <label className="text-sm font-semibold text-navy">Student Name</label>
+        <label className="text-sm font-semibold text-charcoal">Student Name</label>
         <input
           {...register("name", { required: "Name is required", maxLength: 80 })}
-          className="mt-1.5 w-full rounded-xl border bg-background px-4 py-3 text-sm focus:border-electric focus:ring-2 focus:ring-electric/20 outline-none"
+          className="mt-1.5 w-full rounded-xl border bg-background px-4 py-3 text-sm focus:border-brand-red focus:ring-2 focus:ring-brand-red/20 outline-none"
           placeholder="Your full name"
         />
         {errors.name && <p className="mt-1 text-xs text-destructive">{errors.name.message}</p>}
@@ -54,26 +54,26 @@ export function EnquiryForm({ hideHeading }: { hideHeading?: boolean }) {
 
       <div className="grid sm:grid-cols-2 gap-4">
         <div>
-          <label className="text-sm font-semibold text-navy">Mobile Number</label>
+          <label className="text-sm font-semibold text-charcoal">Mobile Number</label>
           <input
             {...register("mobile", {
               required: "Mobile is required",
               pattern: { value: /^[6-9]\d{9}$/, message: "Enter a valid 10-digit number" },
             })}
-            className="mt-1.5 w-full rounded-xl border bg-background px-4 py-3 text-sm focus:border-electric focus:ring-2 focus:ring-electric/20 outline-none"
+            className="mt-1.5 w-full rounded-xl border bg-background px-4 py-3 text-sm focus:border-brand-red focus:ring-2 focus:ring-brand-red/20 outline-none"
             placeholder="10-digit mobile"
           />
           {errors.mobile && <p className="mt-1 text-xs text-destructive">{errors.mobile.message}</p>}
         </div>
         <div>
-          <label className="text-sm font-semibold text-navy">Email</label>
+          <label className="text-sm font-semibold text-charcoal">Email</label>
           <input
             type="email"
             {...register("email", {
               required: "Email is required",
               pattern: { value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/, message: "Invalid email" },
             })}
-            className="mt-1.5 w-full rounded-xl border bg-background px-4 py-3 text-sm focus:border-electric focus:ring-2 focus:ring-electric/20 outline-none"
+            className="mt-1.5 w-full rounded-xl border bg-background px-4 py-3 text-sm focus:border-brand-red focus:ring-2 focus:ring-brand-red/20 outline-none"
             placeholder="you@example.com"
           />
           {errors.email && <p className="mt-1 text-xs text-destructive">{errors.email.message}</p>}
@@ -81,10 +81,10 @@ export function EnquiryForm({ hideHeading }: { hideHeading?: boolean }) {
       </div>
 
       <div>
-        <label className="text-sm font-semibold text-navy">Course Interested</label>
+        <label className="text-sm font-semibold text-charcoal">Course Interested</label>
         <select
           {...register("course", { required: "Please select a course" })}
-          className="mt-1.5 w-full rounded-xl border bg-background px-4 py-3 text-sm focus:border-electric focus:ring-2 focus:ring-electric/20 outline-none"
+          className="mt-1.5 w-full rounded-xl border bg-background px-4 py-3 text-sm focus:border-brand-red focus:ring-2 focus:ring-brand-red/20 outline-none"
           defaultValue=""
         >
           <option value="" disabled>Select a course</option>
@@ -94,11 +94,11 @@ export function EnquiryForm({ hideHeading }: { hideHeading?: boolean }) {
       </div>
 
       <div>
-        <label className="text-sm font-semibold text-navy">Message</label>
+        <label className="text-sm font-semibold text-charcoal">Message</label>
         <textarea
           {...register("message", { maxLength: 500 })}
           rows={3}
-          className="mt-1.5 w-full rounded-xl border bg-background px-4 py-3 text-sm focus:border-electric focus:ring-2 focus:ring-electric/20 outline-none resize-none"
+          className="mt-1.5 w-full rounded-xl border bg-background px-4 py-3 text-sm focus:border-brand-red focus:ring-2 focus:ring-brand-red/20 outline-none resize-none"
           placeholder="Tell us about your goals (optional)"
         />
       </div>
@@ -124,7 +124,7 @@ export function EnquiryForm({ hideHeading }: { hideHeading?: boolean }) {
       <div className="container-x grid lg:grid-cols-2 gap-10 lg:gap-16">
         <div data-aos="fade-right">
           <span className="eyebrow">Get in touch</span>
-          <h2 className="mt-4 text-3xl md:text-4xl font-extrabold text-navy">
+          <h2 className="mt-4 text-3xl md:text-4xl font-extrabold text-charcoal">
             Book your free counselling session
           </h2>
           <p className="mt-3 text-muted-foreground max-w-md">
@@ -133,29 +133,29 @@ export function EnquiryForm({ hideHeading }: { hideHeading?: boolean }) {
 
           <div className="mt-8 space-y-5">
             <div className="flex items-start gap-4">
-              <div className="h-11 w-11 rounded-xl bg-electric/10 text-electric flex items-center justify-center">
+              <div className="h-11 w-11 rounded-xl bg-brand-red/10 text-brand-red flex items-center justify-center">
                 <MapPin className="h-5 w-5" />
               </div>
               <div>
-                <div className="font-bold text-navy">Visit our campus</div>
+                <div className="font-bold text-charcoal">Visit our campus</div>
                 <div className="text-sm text-muted-foreground">Main Road, Tiruvarur, Tamil Nadu 610001</div>
               </div>
             </div>
             <div className="flex items-start gap-4">
-              <div className="h-11 w-11 rounded-xl bg-electric/10 text-electric flex items-center justify-center">
+              <div className="h-11 w-11 rounded-xl bg-brand-red/10 text-brand-red flex items-center justify-center">
                 <Phone className="h-5 w-5" />
               </div>
               <div>
-                <div className="font-bold text-navy">Call us</div>
+                <div className="font-bold text-charcoal">Call us</div>
                 <div className="text-sm text-muted-foreground">+91 99999 99999</div>
               </div>
             </div>
             <div className="flex items-start gap-4">
-              <div className="h-11 w-11 rounded-xl bg-electric/10 text-electric flex items-center justify-center">
+              <div className="h-11 w-11 rounded-xl bg-brand-red/10 text-brand-red flex items-center justify-center">
                 <Mail className="h-5 w-5" />
               </div>
               <div>
-                <div className="font-bold text-navy">Email us</div>
+                <div className="font-bold text-charcoal">Email us</div>
                 <div className="text-sm text-muted-foreground">info@cadpointtiruvarur.in</div>
               </div>
             </div>

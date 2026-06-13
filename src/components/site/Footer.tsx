@@ -3,11 +3,11 @@ import { Link } from "@tanstack/react-router";
 
 export function Footer() {
   return (
-    <footer id="about" className="bg-navy text-navy-foreground pt-16 pb-8">
+    <footer id="about" className="bg-charcoal text-charcoal-foreground pt-16 pb-8">
       <div className="container-x grid md:grid-cols-2 lg:grid-cols-4 gap-10">
         <div>
           <div className="flex items-center gap-2">
-            <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-electric">
+            <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-brand-red">
               <Compass className="h-5 w-5" />
             </span>
             <div>
@@ -20,7 +20,7 @@ export function Footer() {
           </p>
           <div className="mt-5 flex gap-3">
             {[Facebook, Instagram, Youtube, Linkedin].map((Ic, i) => (
-              <a key={i} href="#" className="h-9 w-9 rounded-full bg-white/10 hover:bg-electric flex items-center justify-center transition-colors">
+              <a key={i} href="#" className="h-9 w-9 rounded-full bg-white/10 hover:bg-brand-red flex items-center justify-center transition-colors">
                 <Ic className="h-4 w-4" />
               </a>
             ))}
@@ -30,13 +30,13 @@ export function Footer() {
         <div>
           <h4 className="font-bold text-base">Quick Links</h4>
           <ul className="mt-4 space-y-2 text-sm text-white/70">
-            <li><Link to="/" className="hover:text-electric transition-colors">Home</Link></li>
-            <li><Link to="/about" className="hover:text-electric transition-colors">About Us</Link></li>
-            <li><Link to="/courses" className="hover:text-electric transition-colors">Courses</Link></li>
-            <li><Link to="/placements" className="hover:text-electric transition-colors">Placements</Link></li>
-            <li><Link to="/gallery" className="hover:text-electric transition-colors">Gallery</Link></li>
-            <li><Link to="/testimonials" className="hover:text-electric transition-colors">Testimonials</Link></li>
-            <li><Link to="/contact" className="hover:text-electric transition-colors">Contact</Link></li>
+            <li><Link to="/" className="hover:text-brand-red transition-colors">Home</Link></li>
+            <li><Link to="/about" className="hover:text-brand-red transition-colors">About Us</Link></li>
+            <li><Link to="/courses" className="hover:text-brand-red transition-colors">Courses</Link></li>
+            <li><Link to="/placements" className="hover:text-brand-red transition-colors">Placements</Link></li>
+            <li><Link to="/gallery" className="hover:text-brand-red transition-colors">Gallery</Link></li>
+            <li><Link to="/testimonials" className="hover:text-brand-red transition-colors">Testimonials</Link></li>
+            <li><Link to="/contact" className="hover:text-brand-red transition-colors">Contact</Link></li>
           </ul>
         </div>
 
@@ -50,7 +50,7 @@ export function Footer() {
                 "python-programming": "Python", "data-science": "Data Science"
               };
               return (
-                <li key={slug}><Link to={`/courses/${slug}`} className="hover:text-electric transition-colors">{names[slug]}</Link></li>
+                <li key={slug}><Link to="/courses/$slug" params={{ slug }} className="hover:text-brand-red transition-colors">{names[slug]}</Link></li>
               );
             })}
           </ul>
@@ -59,15 +59,15 @@ export function Footer() {
         <div>
           <h4 className="font-bold text-base">Contact</h4>
           <ul className="mt-4 space-y-3 text-sm text-white/70">
-            <li className="flex gap-3"><MapPin className="h-4 w-4 mt-0.5 text-electric flex-shrink-0" /> Main Road, Tiruvarur, Tamil Nadu 610001</li>
-            <li className="flex gap-3"><Phone className="h-4 w-4 mt-0.5 text-electric flex-shrink-0" /> +91 99999 99999</li>
-            <li className="flex gap-3"><Mail className="h-4 w-4 mt-0.5 text-electric flex-shrink-0" /> info@cadpointtiruvarur.in</li>
+            <li className="flex gap-3"><MapPin className="h-4 w-4 mt-0.5 text-brand-red flex-shrink-0" /> Main Road, Tiruvarur, Tamil Nadu 610001</li>
+            <li className="flex gap-3"><Phone className="h-4 w-4 mt-0.5 text-brand-red flex-shrink-0" /> +91 99999 99999</li>
+            <li className="flex gap-3"><Mail className="h-4 w-4 mt-0.5 text-brand-red flex-shrink-0" /> info@cadpointtiruvarur.in</li>
             <li>
               <a
                 href="https://maps.google.com/?q=Tiruvarur"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 mt-1 rounded-full bg-white/10 hover:bg-electric px-4 py-2 text-xs font-semibold transition-colors"
+                className="inline-flex items-center gap-2 mt-1 rounded-full bg-white/10 hover:bg-brand-red px-4 py-2 text-xs font-semibold transition-colors"
               >
                 Open in Google Maps
               </a>

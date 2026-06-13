@@ -27,8 +27,8 @@ function ContactPage() {
           
           <div className="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
             <span className="eyebrow">Get In Touch</span>
-            <h1 className="mt-4 text-4xl md:text-5xl font-extrabold text-navy leading-tight">
-              Let's start your <span className="text-electric">journey</span>
+            <h1 className="mt-4 text-4xl md:text-5xl font-extrabold text-charcoal leading-tight">
+              Let's start your <span className="text-brand-red">journey</span>
             </h1>
             <p className="mt-4 text-lg text-muted-foreground">
               Have questions about our courses or admissions? Our team is here to help you make the right career choice.
@@ -37,42 +37,42 @@ function ContactPage() {
 
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
             <div data-aos="fade-right">
-              <h2 className="text-2xl font-bold text-navy mb-8">Contact Information</h2>
+              <h2 className="text-2xl font-bold text-charcoal mb-8">Contact Information</h2>
               <div className="space-y-6">
                 <div className="flex gap-4">
-                  <div className="h-12 w-12 rounded-xl bg-electric/10 flex items-center justify-center flex-shrink-0 text-electric">
+                  <div className="h-12 w-12 rounded-xl bg-brand-red/10 flex items-center justify-center flex-shrink-0 text-brand-red">
                     <MapPin className="h-6 w-6" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-navy text-lg">Visit Our Campus</h3>
+                    <h3 className="font-bold text-charcoal text-lg">Visit Our Campus</h3>
                     <p className="mt-1 text-muted-foreground">Main Road, Tiruvarur, Tamil Nadu 610001</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <div className="h-12 w-12 rounded-xl bg-electric/10 flex items-center justify-center flex-shrink-0 text-electric">
+                  <div className="h-12 w-12 rounded-xl bg-brand-red/10 flex items-center justify-center flex-shrink-0 text-brand-red">
                     <Phone className="h-6 w-6" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-navy text-lg">Call Us</h3>
+                    <h3 className="font-bold text-charcoal text-lg">Call Us</h3>
                     <p className="mt-1 text-muted-foreground">+91 99999 99999</p>
                     <p className="text-muted-foreground">+91 88888 88888</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <div className="h-12 w-12 rounded-xl bg-electric/10 flex items-center justify-center flex-shrink-0 text-electric">
+                  <div className="h-12 w-12 rounded-xl bg-brand-red/10 flex items-center justify-center flex-shrink-0 text-brand-red">
                     <Mail className="h-6 w-6" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-navy text-lg">Email Us</h3>
+                    <h3 className="font-bold text-charcoal text-lg">Email Us</h3>
                     <p className="mt-1 text-muted-foreground">info@cadpointtiruvarur.in</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <div className="h-12 w-12 rounded-xl bg-electric/10 flex items-center justify-center flex-shrink-0 text-electric">
+                  <div className="h-12 w-12 rounded-xl bg-brand-red/10 flex items-center justify-center flex-shrink-0 text-brand-red">
                     <Clock className="h-6 w-6" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-navy text-lg">Working Hours</h3>
+                    <h3 className="font-bold text-charcoal text-lg">Working Hours</h3>
                     <p className="mt-1 text-muted-foreground">Mon - Sat: 9:00 AM - 7:00 PM</p>
                     <p className="text-muted-foreground">Sunday: 10:00 AM - 1:00 PM</p>
                   </div>
@@ -94,7 +94,7 @@ function ContactPage() {
             </div>
 
             <div data-aos="fade-left">
-              <h2 className="text-2xl font-bold text-navy mb-8">Send an Enquiry</h2>
+              <h2 className="text-2xl font-bold text-charcoal mb-8">Send an Enquiry</h2>
               <div className="card-soft p-8">
                 <EnquiryForm hideHeading />
               </div>

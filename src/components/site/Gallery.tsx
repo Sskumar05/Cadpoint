@@ -1,9 +1,13 @@
+import { useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import { galleryImages } from "@/lib/data";
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
 
 export function Gallery({ limit }: { limit?: number }) {
   const displayImages = limit ? galleryImages.slice(0, limit) : galleryImages;
+  const [index, setIndex] = useState(-1);
 
   return (
     <section id="gallery" className="py-20 md:py-28">
@@ -11,7 +15,7 @@ export function Gallery({ limit }: { limit?: number }) {
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
           <div data-aos="fade-right" className="max-w-2xl">
             <span className="eyebrow">Campus Life</span>
-            <h2 className="mt-4 text-3xl md:text-4xl font-extrabold text-navy">
+            <h2 className="mt-4 text-3xl md:text-4xl font-extrabold text-charcoal">
               Inside the CADPOINT experience
             </h2>
           </div>
@@ -26,7 +30,8 @@ export function Gallery({ limit }: { limit?: number }) {
               key={i}
               data-aos="zoom-in"
               data-aos-delay={(i % 4) * 80}
-              className={`relative overflow-hidden rounded-2xl group ${img.span || ''}`}
+              className={`relative overflow-hidden rounded-2xl group cursor-pointer ${img.span || ''}`}
+              onClick={() => setIndex(i)}
             >
               <img
                 src={img.src}
@@ -34,12 +39,19 @@ export function Gallery({ limit }: { limit?: number }) {
                 loading="lazy"
                 className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/0 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+              <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-charcoal/0 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
                 <span className="text-sm font-semibold text-white">{img.alt}</span>
               </div>
             </div>
           ))}
         </div>
+
+        <Lightbox
+          index={index}
+          open={index >= 0}
+          close={() => setIndex(-1)}
+          slides={displayImages}
+        />
         
         {limit && (
           <div className="mt-12 flex justify-center">

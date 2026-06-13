@@ -39,9 +39,9 @@ export function StatsDark() {
   }, []);
 
   return (
-    <section ref={ref} className="relative py-20 md:py-24 bg-navy text-navy-foreground overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(40%_60%_at_20%_30%,oklch(0.5_0.22_270/0.35),transparent_60%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(40%_60%_at_80%_70%,oklch(0.5_0.22_270/0.25),transparent_60%)]" />
+    <section ref={ref} className="relative py-20 md:py-24 bg-charcoal text-charcoal-foreground overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(40%_60%_at_20%_30%,rgba(227,30,36,0.35),transparent_60%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(40%_60%_at_80%_70%,rgba(227,30,36,0.25),transparent_60%)]" />
       <div className="container-x relative">
         <div className="text-center max-w-2xl mx-auto" data-aos="fade-up">
           <span className="eyebrow !bg-white/10 !text-white/90">Our Impact</span>
@@ -92,7 +92,7 @@ export function TrustStrip() {
       <div className="container-x grid grid-cols-2 md:grid-cols-4 gap-6">
         {t.map((x, i) => (
           <div key={x.l} data-aos="fade-up" data-aos-delay={i * 70} className="text-center">
-            <div className="text-2xl md:text-3xl font-extrabold text-navy">{x.v}</div>
+            <div className="text-2xl md:text-3xl font-extrabold text-charcoal">{x.v}</div>
             <div className="text-xs md:text-sm text-muted-foreground mt-1">{x.l}</div>
           </div>
         ))}

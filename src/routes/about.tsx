@@ -26,8 +26,8 @@ function AboutPage() {
           <Breadcrumb title="About Us" />
           
           <div className="max-w-3xl mb-12" data-aos="fade-up">
-            <h1 className="text-4xl md:text-5xl font-extrabold text-navy leading-tight">
-              Empowering careers through <span className="text-electric">expert training</span> since 2010.
+            <h1 className="text-4xl md:text-5xl font-extrabold text-charcoal leading-tight">
+              Empowering careers through <span className="text-brand-red">expert training</span> since 2010.
             </h1>
             <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
               CADPOINT Tiruvarur is an ISO-certified educational institute dedicated to providing industry-standard training in CAD, BIM, IT, and related technologies. We bridge the gap between academic learning and industry requirements.

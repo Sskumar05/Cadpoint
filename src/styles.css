@@ -32,54 +32,57 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --color-navy: var(--navy);
-  --color-navy-foreground: var(--navy-foreground);
-  --color-electric: var(--electric);
-  --color-electric-foreground: var(--electric-foreground);
+  --color-charcoal: var(--charcoal);
+  --color-charcoal-foreground: var(--charcoal-foreground);
+  --color-brand-red: var(--brand-red);
+  --color-brand-red-foreground: var(--brand-red-foreground);
+  --color-brand-dark-red: var(--brand-dark-red);
   --color-surface: var(--surface);
   --color-whatsapp: var(--whatsapp);
 
   --font-display: "Poppins", "Inter", system-ui, sans-serif;
   --font-sans: "Inter", system-ui, sans-serif;
 
-  --shadow-soft: 0 4px 20px -4px oklch(0.2 0.08 265 / 0.08);
-  --shadow-card: 0 10px 30px -10px oklch(0.2 0.08 265 / 0.15);
-  --shadow-glow: 0 20px 60px -20px oklch(0.48 0.22 270 / 0.35);
+  --shadow-soft: 0 4px 20px -4px rgba(0, 0, 0, 0.05);
+  --shadow-card: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
+  --shadow-glow: 0 20px 60px -20px rgba(227, 30, 36, 0.35);
 }
 
 :root {
   --radius: 0.875rem;
 
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.15 0.04 265);
-  --surface: oklch(0.975 0.005 260);
+  --background: #FFFFFF;
+  --foreground: #111827;
+  --surface: #F5F5F5;
 
-  --navy: oklch(0.22 0.09 265);          /* #081C4B */
-  --navy-foreground: oklch(0.985 0 0);
+  --charcoal: #111827;
+  --charcoal-foreground: #FFFFFF;
 
-  --electric: oklch(0.5 0.22 270);       /* #4F46E5 */
-  --electric-foreground: oklch(0.99 0 0);
+  --brand-red: #E31E24;
+  --brand-red-foreground: #FFFFFF;
 
-  --whatsapp: oklch(0.66 0.18 145);
+  --brand-dark-red: #B51217;
 
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.15 0.04 265);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.15 0.04 265);
+  --whatsapp: #25D366;
 
-  --primary: oklch(0.22 0.09 265);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.96 0.01 260);
-  --secondary-foreground: oklch(0.22 0.09 265);
-  --muted: oklch(0.96 0.01 260);
-  --muted-foreground: oklch(0.5 0.02 260);
-  --accent: oklch(0.5 0.22 270);
-  --accent-foreground: oklch(0.99 0 0);
-  --destructive: oklch(0.58 0.24 27);
-  --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.92 0.01 260);
-  --input: oklch(0.92 0.01 260);
-  --ring: oklch(0.5 0.22 270);
+  --card: #FFFFFF;
+  --card-foreground: #111827;
+  --popover: #FFFFFF;
+  --popover-foreground: #111827;
+
+  --primary: var(--charcoal);
+  --primary-foreground: #FFFFFF;
+  --secondary: #F5F5F5;
+  --secondary-foreground: var(--charcoal);
+  --muted: #F5F5F5;
+  --muted-foreground: #6B7280;
+  --accent: var(--brand-red);
+  --accent-foreground: #FFFFFF;
+  --destructive: #EF4444;
+  --destructive-foreground: #FFFFFF;
+  --border: #E5E7EB;
+  --input: #E5E7EB;
+  --ring: var(--brand-red);
 }
 
 @layer base {
@@ -103,21 +106,21 @@
 
 @utility btn-primary {
   display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
-  background: linear-gradient(135deg, var(--electric), oklch(0.42 0.22 275));
-  color: var(--electric-foreground);
+  background: var(--brand-red);
+  color: var(--brand-red-foreground);
   padding: 0.85rem 1.6rem; border-radius: 999px; font-weight: 600;
-  box-shadow: var(--shadow-glow);
-  transition: transform .25s ease, box-shadow .25s ease, opacity .25s ease;
-  &:hover { transform: translateY(-2px); opacity: 0.95; }
+  box-shadow: 0 10px 30px -10px rgba(227, 30, 36, 0.5);
+  transition: transform .25s ease, box-shadow .25s ease, opacity .25s ease, background-color .2s ease;
+  &:hover { transform: translateY(-2px); opacity: 1; background: var(--brand-dark-red); }
 }
 
 @utility btn-outline {
   display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
-  background: transparent; color: var(--navy);
-  border: 1.5px solid var(--navy);
+  background: transparent; color: var(--charcoal);
+  border: 1.5px solid var(--charcoal);
   padding: 0.8rem 1.55rem; border-radius: 999px; font-weight: 600;
   transition: all .25s ease;
-  &:hover { background: var(--navy); color: var(--navy-foreground); }
+  &:hover { background: var(--charcoal); color: var(--charcoal-foreground); }
 }
 
 @utility btn-whatsapp {
@@ -131,15 +134,15 @@
 @utility eyebrow {
   display: inline-block;
   font-size: 0.75rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
-  color: var(--electric);
+  color: var(--brand-red);
   padding: 0.35rem 0.8rem; border-radius: 999px;
-  background: oklch(0.5 0.22 270 / 0.08);
+  background: rgba(227, 30, 36, 0.08);
 }
 
 @utility card-soft {
   background: var(--card); border-radius: 1.25rem;
   box-shadow: var(--shadow-soft);
-  border: 1px solid oklch(0.92 0.01 260 / 0.7);
+  border: 1px solid rgba(0,0,0,0.05);
   transition: transform .3s ease, box-shadow .3s ease;
   &:hover { transform: translateY(-6px); box-shadow: var(--shadow-card); }
 }

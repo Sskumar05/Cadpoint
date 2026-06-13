@@ -49,8 +49,8 @@ function Index() {
         <div id="enquiry-form" className="py-20 md:py-28">
           <div className="container-x max-w-3xl">
             <div className="text-center mb-10" data-aos="fade-up">
-              <h2 className="text-3xl md:text-4xl font-extrabold text-navy">
-                Have <span className="text-electric">Questions?</span>
+              <h2 className="text-3xl md:text-4xl font-extrabold text-charcoal">
+                Have <span className="text-brand-red">Questions?</span>
               </h2>
             </div>
             <div className="card-soft p-8" data-aos="zoom-in">

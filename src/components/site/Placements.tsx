@@ -10,7 +10,7 @@ export function Placements({ limit }: { limit?: number }) {
       <div className="container-x">
         <div className="text-center max-w-2xl mx-auto" data-aos="fade-up">
           <span className="eyebrow">Placement Success</span>
-          <h2 className="mt-4 text-3xl md:text-4xl font-extrabold text-navy">
+          <h2 className="mt-4 text-3xl md:text-4xl font-extrabold text-charcoal">
             Our graduates work at India's top companies
           </h2>
           <p className="mt-3 text-muted-foreground">
@@ -22,7 +22,7 @@ export function Placements({ limit }: { limit?: number }) {
           {placementCompanies.map((c) => (
             <div
               key={c}
-              className="h-16 rounded-xl border bg-card flex items-center justify-center px-3 text-center text-sm font-bold text-navy/80 hover:border-electric hover:text-electric transition-colors"
+              className="h-16 rounded-xl border bg-card flex items-center justify-center px-3 text-center text-sm font-bold text-charcoal/80 hover:border-brand-red hover:text-brand-red transition-colors"
             >
               {c}
             </div>
@@ -38,23 +38,23 @@ export function Placements({ limit }: { limit?: number }) {
               className="card-soft p-6"
             >
               <div className="flex items-center gap-3">
-                <div className="h-12 w-12 rounded-full bg-gradient-to-br from-electric to-navy text-white flex items-center justify-center font-bold">
+                <div className="h-12 w-12 rounded-full bg-gradient-to-br from-brand-red to-brand-dark-red text-white flex items-center justify-center font-bold">
                   {s.name.charAt(0)}
                 </div>
                 <div>
-                  <div className="font-bold text-navy">{s.name}</div>
+                  <div className="font-bold text-charcoal">{s.name}</div>
                   <div className="text-xs text-muted-foreground">{s.role}</div>
                 </div>
               </div>
               <div className="mt-5 space-y-2 text-sm">
                 <div className="flex items-center gap-2 text-foreground/80">
-                  <Building2 className="h-4 w-4 text-electric" /> {s.company}
+                  <Building2 className="h-4 w-4 text-brand-red" /> {s.company}
                 </div>
                 <div className="flex items-center gap-2 text-foreground/80">
-                  <IndianRupee className="h-4 w-4 text-electric" /> {s.pkg}
+                  <IndianRupee className="h-4 w-4 text-brand-red" /> {s.pkg}
                 </div>
                 <div className="flex items-center gap-2 text-foreground/80">
-                  <TrendingUp className="h-4 w-4 text-electric" /> {s.course}
+                  <TrendingUp className="h-4 w-4 text-brand-red" /> {s.course}
                 </div>
               </div>
             </div>

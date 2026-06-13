@@ -13,7 +13,7 @@ export function WhyChoose() {
       <div className="container-x">
         <div className="max-w-2xl mx-auto text-center" data-aos="fade-up">
           <span className="eyebrow">Why CADPOINT</span>
-          <h2 className="mt-4 text-3xl md:text-4xl font-extrabold text-navy">
+          <h2 className="mt-4 text-3xl md:text-4xl font-extrabold text-charcoal">
             Everything you need to launch your career
           </h2>
           <p className="mt-3 text-muted-foreground">
@@ -29,10 +29,10 @@ export function WhyChoose() {
               data-aos-delay={i * 100}
               className="card-soft p-7 group"
             >
-              <div className="h-14 w-14 rounded-2xl bg-gradient-to-br from-electric to-navy text-white flex items-center justify-center shadow-[0_10px_25px_-10px_rgba(79,70,229,0.6)] group-hover:scale-110 transition-transform">
+              <div className="h-14 w-14 rounded-2xl bg-gradient-to-br from-brand-red to-brand-dark-red text-white flex items-center justify-center shadow-[0_10px_25px_-10px_rgba(79,70,229,0.6)] group-hover:scale-110 transition-transform">
                 <f.icon className="h-7 w-7" />
               </div>
-              <h3 className="mt-5 text-lg font-bold text-navy">{f.title}</h3>
+              <h3 className="mt-5 text-lg font-bold text-charcoal">{f.title}</h3>
               <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{f.desc}</p>
             </div>
           ))}

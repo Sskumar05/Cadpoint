@@ -13,7 +13,7 @@ export function Newsletter() {
         >
           <div>
             <span className="eyebrow">Newsletter</span>
-            <h3 className="mt-3 text-2xl md:text-3xl font-extrabold text-navy">
+            <h3 className="mt-3 text-2xl md:text-3xl font-extrabold text-charcoal">
               Get course updates & career tips
             </h3>
             <p className="mt-2 text-sm text-muted-foreground">
@@ -30,7 +30,7 @@ export function Newsletter() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="your@email.com"
-              className="flex-1 rounded-full border bg-background px-5 py-3.5 text-sm focus:border-electric focus:ring-2 focus:ring-electric/20 outline-none"
+              className="flex-1 rounded-full border bg-background px-5 py-3.5 text-sm focus:border-brand-red focus:ring-2 focus:ring-brand-red/20 outline-none"
             />
             <button type="submit" className="btn-primary">
               {done ? <CheckCircle2 className="h-4 w-4" /> : <Send className="h-4 w-4" />}

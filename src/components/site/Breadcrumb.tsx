@@ -9,7 +9,7 @@ export function Breadcrumb({ title }: { title?: string }) {
     <nav className="flex items-center text-sm text-muted-foreground mb-8" aria-label="Breadcrumb">
       <ol className="flex items-center space-x-2">
         <li>
-          <Link to="/" className="hover:text-electric transition-colors flex items-center">
+          <Link to="/" className="hover:text-brand-red transition-colors flex items-center">
             <Home className="h-4 w-4" />
           </Link>
         </li>
@@ -34,7 +34,7 @@ export function Breadcrumb({ title }: { title?: string }) {
                   {text}
                 </span>
               ) : (
-                <Link to={to} className="hover:text-electric transition-colors">
+                <Link to={to} className="hover:text-brand-red transition-colors">
                   {text}
                 </Link>
               )}
