@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight, PlayCircle, Award, Briefcase, Users } from "lucide-react";
-import heroImg from "@/assets/hero-student.jpg";
+import heroImg from "@/assets/courses/Front_img.png";
 
 export function Hero() {
   return (
@@ -29,7 +29,7 @@ export function Hero() {
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
-            <a href="#contact" className="btn-primary">
+            <a href="#enquiry-form" className="btn-primary">
               Enquire Now <ArrowRight className="h-4 w-4" />
             </a>
             <a href="#courses" className="btn-outline">

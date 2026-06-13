@@ -45,7 +45,7 @@ function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-bold text-charcoal text-lg">Visit Our Campus</h3>
-                    <p className="mt-1 text-muted-foreground">Main Road, Tiruvarur, Tamil Nadu 610001</p>
+                    <p className="mt-1 text-muted-foreground">21/2, Durgalaya Rd, Madappuram,<br></br>Thiruvarur, Tamil Nadu 610001 </p>
                   </div>
                 </div>
                 <div className="flex gap-4">
@@ -54,8 +54,7 @@ function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-bold text-charcoal text-lg">Call Us</h3>
-                    <p className="mt-1 text-muted-foreground">+91 99999 99999</p>
-                    <p className="text-muted-foreground">+91 88888 88888</p>
+                    <p className="mt-1 text-muted-foreground">+91 82484 90202</p>            
                   </div>
                 </div>
                 <div className="flex gap-4">
@@ -64,7 +63,7 @@ function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-bold text-charcoal text-lg">Email Us</h3>
-                    <p className="mt-1 text-muted-foreground">info@cadpointtiruvarur.in</p>
+                    <p className="mt-1 text-muted-foreground">cadpointthiruvarur@gmail.com</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
@@ -81,7 +80,7 @@ function ContactPage() {
 
               <div className="mt-10 rounded-2xl overflow-hidden h-[300px] border">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.423788220822!2d79.6334543152865!3d10.77884849231922!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a554743285c5dfb%3A0x6b4fb712cf75e3a0!2sTiruvarur%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1655000000000!5m2!1sen!2sin"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.4423576766076!2d79.6279187!3d10.777392299999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5547a1db812043%3A0x339f9652bb4e147c!2sCADPOINT%20-%20Authorised%20CADD%20Training%20Centre%20in%20Thiruvarur!5e0!3m2!1sen!2sin!4v1781349001607!5m2!1sen!2sin"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
