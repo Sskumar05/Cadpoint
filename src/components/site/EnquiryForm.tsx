@@ -99,7 +99,7 @@ export function EnquiryForm({ hideHeading }: { hideHeading?: boolean }) {
 
       <div className="grid sm:grid-cols-2 gap-4">
         <div>
-          <label className="text-sm font-semibold text-charcoal">Course Interested</label>
+          <label className="text-sm font-semibold text-charcoal">Domain</label>
           <select
             {...register("course")}
             className="mt-1.5 w-full rounded-xl border bg-background px-4 py-3 text-sm focus:border-brand-red focus:ring-2 focus:ring-brand-red/20 outline-none"
@@ -112,7 +112,7 @@ export function EnquiryForm({ hideHeading }: { hideHeading?: boolean }) {
         </div>
 
         <div>
-          <label className="text-sm font-semibold text-charcoal">Sub-Course</label>
+          <label className="text-sm font-semibold text-charcoal">Course</label>
           <select
             {...register("subCourse")}
             className="mt-1.5 w-full rounded-xl border bg-background px-4 py-3 text-sm focus:border-brand-red focus:ring-2 focus:ring-brand-red/20 outline-none disabled:opacity-50 disabled:cursor-not-allowed"

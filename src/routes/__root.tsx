@@ -11,6 +11,7 @@ import {
 import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
+import faviconUrl from "../assets/logo-removebg-preview.png";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { SplashScreen } from "../components/site/SplashScreen";
 import { Toaster } from "sonner";
@@ -90,6 +91,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
+      {
+        rel: "icon",
+        href: faviconUrl,
+      },
       {
         rel: "stylesheet",
         href: appCss,

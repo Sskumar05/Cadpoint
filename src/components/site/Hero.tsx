@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { ArrowRight, PlayCircle, Award, Briefcase, Users } from "lucide-react";
 import heroImg from "@/assets/courses/Front_img.png";
+import cadlogo from "@/assets/courses/Logo_img.png";
+
 
 export function Hero() {
   return (
@@ -15,11 +17,14 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
         >
-          <span className="eyebrow">Courses Powered Caddpoint</span>
+          <span className="eyebrow flex items-center gap-2 w-[60%]">
+            <img className="h-6 w-6 object-contain" src={cadlogo} alt="" />
+            Courses Powered By Cadpoint
+          </span>
           <h1 className="mt-5 font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold text-charcoal leading-[1.05]">
             Build Your Career with{" "}
             <span className="bg-gradient-to-r from-brand-red to-brand-dark-red bg-clip-text text-transparent">
-              Industry-Oriented
+             Industry-Oriented
             </span>{" "}
             CAD & IT Training
           </h1>

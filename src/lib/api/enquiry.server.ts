@@ -70,8 +70,8 @@ export const submitEnquiry = createServerFn({ method: "POST" })
               <p><strong>Name:</strong> ${data.name}</p>
               <p><strong>Mobile:</strong> ${data.mobile}</p>
               <p><strong>Email:</strong> ${data.email}</p>
-              <p><strong>Course Interested:</strong> ${data.course}</p>
-              <p><strong>Sub-Course:</strong> ${data.subCourse}</p>
+              <p><strong>Domain:</strong> ${data.course}</p>
+              <p><strong>Course:</strong> ${data.subCourse}</p>
               <p><strong>Message:</strong> ${data.message || "N/A"}</p>
               <p><strong>Submitted At:</strong> ${submittedDate}</p>
             `,

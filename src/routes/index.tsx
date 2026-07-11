@@ -13,10 +13,12 @@ import { Newsletter } from "@/components/site/Newsletter";
 import { Footer } from "@/components/site/Footer";
 import { WhatsAppFloat } from "@/components/site/WhatsAppFloat";
 import { PageWrapper } from "@/components/site/PageWrapper";
+import { link } from "fs";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
+      
       { title: "CADD XPERT Tiruvarur — CAD & IT Training Institute" },
       { name: "description", content: "Premier CAD & IT training in Tiruvarur. AutoCAD, Revit, CATIA, SolidWorks, Python, Full Stack — 100% placement assistance." },
       { property: "og:title", content: "CADD XPERT Tiruvarur — CAD & IT Training Institute" },
